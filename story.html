@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://kit.fontawesome.com/117d3269ab.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Josefin Sana', sans-serif;
+        }
+
+        body{
+            background: #F4ECF7 ;
+        }
+
+        #c{
+            position: relative;
+            left: +25px;
+        }
+
+        h2{
+            position: relative;
+            left: -10px;
+        }
+
+        .wrapper{
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        .info{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .wrapper .sidebar{
+            position: fixed;
+            width: 200px;
+            height: 100%;
+            background:	#008080;
+            padding: 30px 0;
+        }
+
+        .wrapper .sidebar h2{
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .wrapper .sidebar ul li{
+            padding: 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-top: 1px solid rgba(225,225,225,0.05);
+        }
+
+        .wrapper .sidebar ul li a{
+            color: white;
+            display: block;
+        }
+
+        .wrapper .sidebar ul li a .fas{
+            width: 25px;
+        }
+
+        .wrapper .sidebar ul li:hover{
+            background: #008B8B;
+        }
+
+        .wrapper .sidebar ul li:hover a{
+            color: #fff;
+        }
+
+        .wrapper .sidebar .social_media{
+            position: absolute;
+            bottom: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .wrapper .sidebar .social_media a{
+            display: block;
+            width: 40px;
+            background: #008B8B;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin: 0 5px;
+            color: #bdb8d7;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+
+        .wrapper .main_content{
+            width: 100%;
+            margin-left: 200px;
+        }
+
+        .wrapper .main_content .header img{
+            width: 100%;
+            height: 230px;
+        }
+
+        .wrapper .main_content .header center{
+            color: white;
+            font-family: 'Josefin Sana', sans-serif;
+            font-size: 30px;
+        }
+
+        body{
+            background-color: #E6E6FA;
+        }
+
+        .main_content{
+            background-color: #138D75;
+        }
+
+        .main{
+            margin-left: 200px;
+            margin-top: 20px;
+        }
+
+        .search {
+            width: 100%;
+            position: relative;
+            display: flex;
+       }
+
+        .searchTerm {
+            width: 100%;
+            border: 3px solid white;
+            border-right: none;
+            padding: 5px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .searchTerm:focus{
+            color:#0B5345;
+        }
+
+        .searchButton {
+            width: 40px;
+            height: 36px;
+            border: 1px solid #0B5345;
+            background: #0B5345;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .wrap{
+            width: 500px;
+        }
+
+        .but{
+            display: flex;
+            flex-wrap: nowrap;
+            position: relative;
+            left: +300px;
+        }
+
+        #button1{
+            margin-left: 10px;
+            font-family: 'Josefin Sana', sans-serif;
+            font-size: 20px;
+            color: white;
+            background-color: #0B5345;
+            border: none;
+            width: 200px;
+            height: 35px;
+            border-radius: 10px;
+        }
+
+        #button1:hover{
+            border: none;
+        }
+
+        .desc {
+          padding: 2px 16px;
+      }
+
+      .cimg{
+          background-color: #A9DFBF;
+          color: #0B5345;
+          font-size: 200px;
+          text-align: center;
+      }
+
+      #img3{
+          height:100%;
+          width:100%
+      }
+
+
+      .brief{
+          margin-left: 10px;
+      }
+
+      .brief {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 40%;
+        width: 300px;
+        height: 400px;
+        background-color: white;
+      }
+
+      #button2{
+          border: none;
+          height: 40px;
+          width: 100px;
+          align-items: center;
+          background-color: #0B5345;
+          color: white;
+          margin-top: 20px;
+      }
+
+      .brief .desc h1{
+          color:#0B5345;
+      }
+
+      .desc{
+          margin-top: 30px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .char{
+          display: flex;
+          flex-wrap: nowrap;
+          margin-top: 20px;
+      }
+
+
+
+    </style>
+
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <h2>Castaway<br><p id="c">Corner</p></h2>
+                <ul>
+                    <li><a href="story.html"><i class="fas fa-book"></i> Story</a></li>
+                    <li><a href="character.html"><i class="fas fa-user"></i> Characters</a></li>
+                    <li><a href="#"><i class="fas fa-mountain"></i> Locations</a></li>
+                    <li><a href="#"><i class="fas fa-magic"></i> Items</a></li>  
+                </ul>
+
+                <div class="social_media">
+                    <a href=""> <i class="fab fa-facebook"></i>
+                    <a href=""> <i class="fab fa-instagram"></i></a>
+                    <a href=""> <i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="main_content">
+                <div class="header"><img src="12.jpg"><br>
+                    <center>
+                        <h1>Story</h1>
+                        <p>Your ideas come alive.</p>
+                    </center>
+                </div>
+            </div>  
+
+            <div class="main">
+                <div class="but">
+                    <div class="wrap">
+                        <div class="search">
+                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                        <button type="submit" class="searchButton">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                 </div>
+                <a href="newstory.html">
+                 <button type="button" id="button1">+ New Story</button>
+                </a>
+                </div>
+
+                <div class="char">
+
+                <div class="brief">
+                    <div class="cimg">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                   <div class="desc">
+                     <h1><b>The Demon Raze</b></h1>
+                     <a href="story1.html">
+                     <button type="button" id="button2">View</button>
+                     </a> 
+                   </div>
+                </div>
+                </div>
+            </div>
+            </div>
+    </body>
+</html>
