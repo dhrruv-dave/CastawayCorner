@@ -5,8 +5,9 @@
         <ul>
           <li><a href = "homepage.html" id="name">Castaway Corner</a></li>
           <li><a href = "payment.html" id="otnav">Payments</a></li>
-          <li><a href = "login.html" id="otnav">Sign up</a></li>
-          <li><a href = "login.html" id="otnav">Login</a></li>
+          <li><a href = "contact.html" id="otnav">Contact us</a></li>
+          <li><a href = "signup.html" id="otnav">Sign up</a></li>
+          <li><a href = "signup.html" id="otnav">Login</a></li>
         </ul>
         <script src="https://kit.fontawesome.com/117d3269ab.js" crossorigin="anonymous"></script>
       </div>
@@ -17,8 +18,8 @@
 
       .nav{
         width:1525spx;
-        height: 80px;
-        background: #4b4276;
+        height: 50px;
+        background: #ffffff;
         overflow: hidden;
         position: relative;
         margin: auto;
@@ -45,27 +46,26 @@
 
       .nav a:link{
         width: 200px;
-        height: 100px;
+        height: 50px;
         display: block;
         text-decoration: none;
-        padding:15px;
-        font-size: 19px;
-        text-transform: uppercase;
-        font-family: 'Josefin Sana', sans-serif;
+        padding:20px;
+        font-size: 22px;
+        font-family: 'Montserrat', sans-serif;
       }
 
       .nav a:hover{
-        background-color: #594f8d;
+        font-weight: 700;
       }
 
       .nav a{
-        color: white;
+        color: rgb(0, 0, 0);
       }
 
       #img2{
         width: 100%;
-        height: 700px;
-        margin-top: 10px;
+        height: 100%;
+        
       }
 
       .banner{
@@ -78,43 +78,76 @@
       }
 
       .heading{
-        color: #3498DB ;
+        color: #ffffff ;
         position: absolute;
-        top: 30%;
+        padding-left: 50px;
+        top: 15%;
         width: 100%;
-        text-align: center;
-        font-size: 50px;
+        text-align: left;
+        font-size: 100px;
         font-family: 'Montserrat', sans-serif;
       }
 
       .button button{
-        background-color: #3498DB ;
+        background-color: #ffffff ;
         padding: 15px 30px;
-        border: white;
-        font-size: 20px;
+        border: rgb(0, 0, 0);
+        font-size: 25px;
         position: relative;
-        top: -250px;
-        right: -700px;
+        top: -350px;
+        right: -50px;
         font-family: 'Montserrat', sans-serif;
         border-radius: 20px;
-        color: white;
+        color:#4b53e4;
       }
+
+      .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+     
+    .heading1{
+        color: #4b53e4 ;
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Montserrat', sans-serif;
+        padding-bottom: 0%;
+  
+      }
+    
+
+    
 
       .main{
         margin-left: 150px;
         margin-right: 150px;
-      }
-
-      .main h1{
-        font-family: 'Josefin Sana', sans-serif;
-        font-size: 35px;
-        color: #2980B9 ;
+        background-color: #ffffff;
       }
 
       .main {
-        font-family: 'Josefin Sana', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: 20px;
-        color: #2980B9 ;
+        color: #000000 ;
       }
 
       .container {
@@ -209,11 +242,12 @@
       }
 
       body{
-        background-color: #EAEDED;
+        background-color: #ffffff;
       }
 
       .prem{
-        margin-top: 100px;
+        margin-top: 50px;
+        width: 100%;
       }
 
       .footer{
@@ -239,21 +273,21 @@
         .social-icons{
             list-style: none;
             display: flex;
-            justify-content: center;
+            justify-content: left;
             padding: 15px 0;
         }
         .social-icons li{
             margin: 0 10px;
             width: 50px;
             height: 50px;
-            background: #2e2e2e;
+            background: #000000;
             border-radius: 50%;
             transition: var(--transition);
             cursor: pointer;
         }
         .social-icons li:hover{
-            background: #fff;
-            color: #2e2e2e;
+            background: rgb(0, 0, 0);
+            color: #727272;
         }
         .contact-item span{
             display: block;
@@ -292,6 +326,137 @@
             left: 0;
             z-index: 5;
         }
+
+
+
+        .container1{
+    text-align: center;
+    padding-left: 20%;
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container1 .card{
+    position: relative;
+    cursor: pointer;
+}
+
+.container1 .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container1 .card .face.face1{
+    position: relative;
+    background: #f7a915;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container1 .card:hover .face.face1{
+    background: #ff5841;
+    transform: translateY(0);
+}
+
+.container1 .card .face.face1 .content{
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.container1 .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container1 .card .face.face1 .content img{
+    max-width: 100px;
+}
+
+.container1 .card .face.face1 .content h3{
+  
+    margin: 10px 0 0;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container1 .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(-100px);
+}
+
+.container1 .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container1 .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container1 .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container1 .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  
+  display: flex;
+  height: 50px;
+  width: 1300px;
+}
+
+.progress-value {
+  animation: load 5s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: rgb(0, 0, 0);
+  height: 2px;
+  width: 1000;
+  
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+
+
+
+
+
     </style>
 
     
@@ -299,32 +464,33 @@
         <div class="intro">
           <div class="row">
             <div class="banner">
-              <img src="3.jpg" id="img2">
-              <h1 class="heading">The online database for worldbuilders<br>Start worldbuilding now!!</h1>
+              <img src="lp1-01.png" id="img2">
+              <h1 class="heading">Start <br>Worldbuilding <br>Now!!<br></h1>
+              
             </div>
           </div>
         </div>
 
 
         <div class="button">
-          <a href="login.html">
-          <button type="button">Login</button>
+          <a href="signup.html">
+          <button type="button"><b><span>Login</span></b></button>
           </a>
         </div>
         <div class="main">
 
         
         <div class="bor">
-        <h1>Create enchanting worlds, encapsulating characters and powerful weapons, all on your free worldbuilding corner.</h1>
-        <p>From worldbuilders to authors, from dungeon masters to role players, from creators to designers, Castaway Corner is your free online database to keep track of your story. Map out your story, with each little detail, and bring life to your world. With a free account, you'll have access to the core building blocks of fictional universes (characters, locations, and items), personalized writing prompts set in your world, unlimited document storage and so much more.</p>
-        
+        <h1 class="heading1">Your Creation. Your World!</h1>
+        <p style="text-align: center;">From worldbuilders to authors, from dungeon masters to role players, from creators to designers, Castaway Corner is your free online database to keep track of your story. Map out your story, with each little detail, and bring life to your world. With a free account, you'll have access to the core building blocks of fictional universes (characters, locations, and items), personalized writing prompts set in your world, unlimited document storage and so much more.</p>
+        <br>
         <div class="wr">
           <div class="brief">
             <div class="cimg">
               <img src="5.jpg" alt="Avatar" style="width:100%" id="img3">
             </div>
             <div class="desc">
-              <h1><b>Create Stories</b></h1> 
+              <h2><b>Create Stories</b></h2> 
               <p>Keep track of multiple characters and stories at once, by organizing your ideas, into the universe and story where they belong.</p> 
             </div>
           </div>
@@ -334,7 +500,7 @@
            <img src="9.jpg" alt="Avatar" style="width:100%" id="img3">
            </div>
            <div class="desc">
-             <h1><b>Create Characters</b></h1> 
+             <h2><b>Create Roles</b></h2> 
              <p>From mages to warriors, from dragons to kings, characters are the souls of you world. Keep track of each hero and each soceress.</p> 
            </div>
          </div>
@@ -344,7 +510,7 @@
            <img src="8.jpg" alt="Avatar" style="width:100%" id="img3">
            </div>
            <div class="desc">
-             <h1><b>Create Locations</b></h1> 
+             <h2><b>Create Locations</b></h2> 
              <p>From magical mountains to forbidden fortresses, keep track of the jewels of your realms.</p> 
            </div>
          </div>
@@ -354,74 +520,123 @@
            <img src="6.jpg" alt="Avatar" style="width:100%" id="img3">
            </div>
            <div class="desc">
-             <h1><b>Create Items</b></h1> 
+             <h2><b>Create Items</b></h2> 
              <p>Books, weapons, artifacts and other items. Keep track of who owns them, who made them, their abilities and so much more.</p> 
            </div>
          </div>
          </div>
         </div>
 
+        <br>
+
+        <div class="progress">
+          <div class="progress-value"></div>
+        </div>
+
+        <h1 class="heading1">Features You'll Love!</h1>
+
         <div class="prem">
         <table align="center" width="100%" cellpadding="0" cellspacing="25px">
           <tr>
               <td align="center">
-                  <i class="far fa-smile-wink" style="font-size: 50px; color: #F39C12 ;"></i>
-                  <h1 style="text-align: center; color: #F39C12 ; font-family: 'Josefin Sana', sans-serif;">Deeper Characters</h1>
-                  <p style="text-align: center; color: #F39C12; font-family: 'Josefin Sana', sans-serif;">Create rich characters, with deep backstories. Note down their personalities, features, abilities and so much more.</p>
+                  <i class="far fa-smile-wink" style="font-size: 50px; color: #75b6c9 ;"></i>
+                  <h2 style="text-align: center; color: #000000 ; font-family: 'Montserrat', sans-serif;">Deeper Characters</h2>
+                  <p style="text-align: center; color: #000000; font-family: 'Montserrat', sans-serif;">Create rich characters, with deep backstories. Note down their personalities, features, abilities and so much more with our amazing platform.</p>
               </td>
               <td align="center">
-                  <i class="fas fa-globe-asia" style="font-size: 50px; color: #F39C12 ;"></i>
-                  <h1 style="text-align: center; color: #F39C12 ; font-family: 'Josefin Sana', sans-serif;">Mystical Worlds</h1>
-                  <p style="text-align: center; color: #F39C12; font-family:'Josefin Sana', sans-serif ;">Dive into mystical and vibrant worlds and note down the regions, dialects, landmarks and so much more with personalized pages.</p>
+                  <i class="fas fa-globe-asia" style="font-size: 50px; color: #75b6c9 ;"></i>
+                  <h2 style="text-align: center; color: #000000 ; font-family: 'Montserrat', sans-serif;">Mystical Worlds</h2>
+                  <p style="text-align: center; color: #000000; font-family:'Montserrat', sans-serif ;">Dive into mystical and vibrant worlds and note down the regions, dialects, landmarks and so much more with personalized pages.</p>
               </td>
               <td align="center">
-                  <i class="fas fa-mountain" style="font-size: 50px; color: #F39C12 ;"></i>
-                  <h1 style="text-align: center; color: #F39C12 ; font-family: 'Josefin Sana', sans-serif;">Magical regions</h1>
-                  <p style="text-align: center; color: #F39C12 ; font-family: 'Josefin Sana', sans-serif;">From forbidden mountain, to enchanted forests, create regions packed with suspense and abilities to indulge your story.</p>
+                  <i class="fas fa-mountain" style="font-size: 50px; color: #75b6c9 ;"></i>
+                  <h2 style="text-align: center; color: #000000 ; font-family: 'Montserrat', sans-serif;">Magical regions</h2>
+                  <p style="text-align: center; color: #000000 ; font-family: 'Montserrat', sans-serif;">From forbidden mountain, to enchanted forests, create regions packed with suspense and abilities to indulge your story.</p>
               </td>
           </tr>
           <tr>
               <td align="center">
-                  <i class="fas fa-people-carry" style="font-size: 50px; color: #F39C12 ;"></i>
-                  <h1 style="text-align: center; color: #F39C12 ; font-family: 'Josefin Sana', sans-serif;">Collaborate</h1>
-                  <p style="text-align: center; color: #F39C12 ; font-family: 'Josefin Sana', sans-serif;">Collaborate and share ideas with your friends to improve the quality of your stories.</p>
+                  <i class="fas fa-people-carry" style="font-size: 50px; color: #75b6c9 ;"></i>
+                  <h2 style="text-align: center; color: #000000 ; font-family: 'Montserrat', sans-serif;">Collaborate</h2>
+                  <p style="text-align: center; color: #000000 ; font-family: 'Montserrat', sans-serif;">Collaborate and share ideas with your friends to improve the quality of your stories.</p>
               </td>
               <td align="center">
-                  <i class="fas fa-cloud-upload-alt" style="font-size: 50px; color: #F39C12 ;"></i>
-                  <h1 style="text-align: center; color: #F39C12 ; font-family: 'Josefin Sana', sans-serif;">Backup your data</h1>
-                  <p style="text-align: center; color: #F39C12 ; font-family:'Josefin Sana', sans-serif ;">Upload and save all your data and ideas of your story to the cloud, so you never lose your ideas again.</p>
+                  <i class="fas fa-cloud-upload-alt" style="font-size: 50px; color: #75b6c9 ;"></i>
+                  <h2 style="text-align: center; color: #000000 ; font-family: 'Montserrat', sans-serif;">Backup your data</h2>
+                  <p style="text-align: center; color: #000000 ; font-family:'Montserrat', sans-serif ;">Upload and save all your data and ideas of your story to the cloud, so you never lose your ideas again.</p>
               </td>
               <td align="center">
-                  <i class="fas fa-align-justify" style="font-size: 50px; color: #F39C12 ;"></i>
-                  <h1 style="text-align: center; color: #F39C12 ; font-family: 'Josefin Sana', sans-serif;">Organize</h1>
-                  <p style="text-align: center; color: #F39C12 ; font-family: 'Josefin Sana', sans-serif;">Focus on one story at a time, and organize your ideas efficiently.</p>
+                  <i class="fas fa-align-justify" style="font-size: 50px; color: #75b6c9 ;"></i>
+                  <h2 style="text-align: center; color: #000000 ; font-family: 'Montserrat', sans-serif;">Organize</h2>
+                  <p style="text-align: center; color: #000000 ; font-family: 'Montserrat', sans-serif;">Focus on one story at a time, and organize your ideas efficiently. Being organized leads to success.</p>
               </td>
           </tr>
-      </table><br><br>
-      
-          <h1>Dive deeper into our features with a premium account.</h1>
-          <p>Castaway Corner’s free tier account will help you to design and build your world to your utmost capabilities. But with your support, together we can take your worldbuilding to the next level. With a premium account comes 20 additional customizable and personalized page templates, with its own set of writing prompts.</p>
-          <table align="center" width="100%" cellpadding="0" cellspacing="25px">
-              <tr>
-                  <td align="center">
-                      <i class="fas fa-align-center" style="font-size: 50px; color: #0E6655 ;"></i>
-                      <h1 style="text-align: center; color: #0E6655 ; font-family: 'Josefin Sana', sans-serif;">More templates</h1>
-                      <p style="text-align: center; color: #0E6655 ; font-family: 'Josefin Sana', sans-serif;">With a premium account you get 20 more templates ranging from planets to continents to jobs and so much more.</p>
-                  </td>
-                  <td align="center">
-                      <i class="far fa-check-square" style="font-size: 50px; color: #0E6655 ;"></i>
-                      <h1 style="text-align: center; color: #0E6655 ; font-family: 'Josefin Sana', sans-serif;">Grammer checks</h1>
-                      <p style="text-align: center; color: #0E6655 ; font-family:'Josefin Sana', sans-serif ;">A top level AI works on your grammer checks and descriptions with suggestions to improve.</p>
-                  </td>
-                  <td align="center">
-                      <i class="fas fa-database" style="font-size: 50px; color: #0E6655 ;"></i>
-                      <h1 style="text-align: center; color: #0E6655 ; font-family: 'Josefin Sana', sans-serif;">More data</h1>
-                      <p style="text-align: center; color: #0E6655 ; font-family: 'Josefin Sana', sans-serif;">With a premium account you get access to upload unlimited data and include as many stories and universes as you like.</p>
-                  </td>
-              </tr>
-          </table>
+         
+          
+      </table><br><br></div>
+       
+      <div class="progress">
+        <div class="progress-value"></div>
+      </div>
+
+      <h1 class="heading1"><span>Dive Deeper with a Premium Account!</h1>
+          <p style="text-align: center;">Castaway Corner’s free tier account will help you to design and build your world to your utmost capabilities. But with your support, together we can take your worldbuilding to the next level. With a premium account comes 20 additional customizable and personalized page templates, with its own set of writing prompts.</p>
+          
       </div>     
       </div>
+
+
+
+      <div class="container1">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <i class="fas fa-align-center" style="font-size: 50px; color: #000000 ;"></i>
+                    <h3>More Templates</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>With a premium account you get 20 more templates ranging from planets to continents to jobs and so much more.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                  <i class="far fa-check-square" style="font-size: 50px; color: #000000 ;"></i>
+                    <h3>Grammer Checks</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>A top level AI works on your grammer checks and descriptions with suggestions to improve.</p>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                  <i class="fas fa-database" style="font-size: 50px; color: #000000 ;"></i>
+                    <h3>More Data</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>With a premium account you get access to upload unlimited data and include as many stories and universes as you like.</p>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+
+
+
       <footer class = "footer">
         <div class = "footer-container">
             <div>
