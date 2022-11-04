@@ -3,8 +3,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-  
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet1" href="payment.css">
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,20 @@
    
 
 <body>
+
+  <div class="container-fluid1">
+    <!-- Background animtion-->
+        <div class="background">
+           <div class="cube"></div>
+           <div class="cube"></div>
+           <div class="cube"></div>
+           <div class="cube"></div>
+          <div class="cube"></div>
+        </div>
+    
+<header>
+
+
   <div class="container">
     <input type="checkbox" id="flip">
     <div class="cover">
@@ -35,19 +50,21 @@
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-          <form action="#">
+          <form id="loginform" action="#">
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" required id="email">
+                <input type="email" id="email2" placeholder="Enter your email" required id="email">
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required id="password">
+                <input type="password" id="password2" placeholder="Enter your password" required id="password">
               </div>
               <div class="text"><a href="#">Forgot password?</a></div>
               <div class="button input-box">
-                <input type="submit" value="Submit" onclick="myFunction()">
+               
+                <input type="button" id="signin" value="Submit" onclick="myFunction()">
+              
               </div>
               <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
             </div>
@@ -57,20 +74,19 @@
           <div class="title">Signup</div>
         <form action="#">
             <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="Enter your name" required>
-              </div>
+             
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="Enter your email" required id="email">
+                <input type="email" id="email1" placeholder="Enter your email" required id="email">
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required id="password">
+                <input type="password" id="password1" placeholder="Enter your password" required id="password">
               </div>
               <div class="button input-box">
-                <input type="submit" value="Submit"/>
+               
+                <input type="button" id="signup" value="Submit">
+              
               </div>
               <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
             </div>
@@ -79,10 +95,67 @@
     </div>
     </div>
   </div>
+</header>
+
+
+  <script src="index.js"></script>
+
+  
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+    
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyC_M4MDFAEwo7GjUwi5XXyWR5Md1KClgPQ",
+      authDomain: "castaway-corner.firebaseapp.com",
+      projectId: "castaway-corner",
+      storageBucket: "castaway-corner.appspot.com",
+      messagingSenderId: "505251965914",
+      appId: "1:505251965914:web:b196fd4e42abfae36a2ee3",
+      measurementId: "G-S659TPPTXK"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+
+
+    document.getElementById("signup").addEventListener('click', function(){
+
+      const email = document.getElementById("email1").value
+      const password = document.getElementById("password1").value
+
+      createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        // ...
+        console.log("created");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+        console.log(errorCode + errorMessage);
+      });
+
+
+    })
+
+  </script>
+
 
   <script>
     function myFunction() {
-      window.location.href="story.html";
+      window.location.href="overview.html";
     }
   </script>
 </body>
